@@ -49,7 +49,7 @@ sudo chmod 600 VPSMySQL.cnf
 ./gitTokenSetup.sh "$git_username" "$git_token" > gitTokenSetup.log
 ./installMySQL.sh > installMySQL.log
 sudo ./MySQLUserSetup.sh > MySQLUserSetup.log
-sudo ./initDatabase.sh > initDatabase.log
+sudo ./MySQLUserSetup.sh > MySQLUserSetup.log
 ./installJDK17.sh > installJDK17.log
 ./cloneBackServer.sh > cloneBackServer.log
 ./launchBackServer.sh > launchBackServer.log
