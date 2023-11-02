@@ -40,7 +40,6 @@ sudo chmod +x MySQLUserSetup.sh
 sudo chmod +x MySQLUserSetup.sh
 sudo chmod +x installJDK17.sh
 sudo chmod +x cloneBackServer.sh
-sudo chmod +x launchBackServer.sh
 sudo chmod 600 VPSMySQL.cnf
 
 #Setup Security
@@ -48,8 +47,6 @@ sudo chmod 600 VPSMySQL.cnf
 ./gitTokenSetup.sh "$git_username" "$git_token" > gitTokenSetup.log
 ./installMySQL.sh > installMySQL.log
 sudo ./MySQLUserSetup.sh > MySQLUserSetup.log
-./installJDK17.sh > installJDK17.log
-./launchBackServer.sh > launchBackServer.log
 
 
 #Install and Clone scripts
