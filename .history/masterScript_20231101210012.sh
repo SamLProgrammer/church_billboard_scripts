@@ -38,14 +38,13 @@ sudo chmod gitTokenSetup.sh
 sudo chmod 600 VPSMySQL.cnf
 
 #Setup Security
-./envVarsSetup.sh "$sql_user" "$sql_password" > envVarsSetup.log
-./gitTokenSetup.sh "$git_username" "$git_token" > gitTokenSetup.log
 
 
 #Install and Clone scripts
 # ./installNode.sh> script_node.log
 # ./installMySQL.sh > script_mysql.log
 # ./setupMySQLUser.sh > setupMySQLUser.log
+# ./cloneNodeServer.sh "$git_token" > cloneNodeServer.log
 # ./cloneNodeServerRefresher.sh "$git_token" > cloneNodeServerRefresher.log
 
 

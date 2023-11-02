@@ -42,6 +42,8 @@ sudo chmod 600 VPSMySQL.cnf
 ./gitTokenSetup.sh "$git_username" "$git_token" > gitTokenSetup.log
 
 
+
+
 #Install and Clone scripts
 # ./installNode.sh> script_node.log
 # ./installMySQL.sh > script_mysql.log

@@ -22,7 +22,7 @@ mkdir -p /home/SamLProgrammer/church_billboard/mysql
 mkdir -p /home/SamLProgrammer/church_billboard/front
 
 #downloading repo (using provided token)
-REPO_URL="https://SamLProgrammer:${git_token}@github.com/SamLProgrammer/church_billboard_scripts.git"
+REPO_URL="https://SamLProgrammer:${git_token}@github.com/SamLProgrammer/ABST-VPS-Initial-Installation-Bashes.git"
 echo "*************************************************************************"
 echo "$REPO_URL"
 echo "*************************************************************************"
@@ -30,22 +30,30 @@ cd "$TARGET_DIRECTORY"
 git clone $REPO_URL
 
 #relocating current script directory
-cd /home/SamLProgrammer/church_billboard/initial_scripts/church_billboard_scripts
+# cd /home/SamLProgrammer/church_billboard/initial_scripts/ABST-VPS-Initial-Installation-Bashes
 
 #giving executable permissions to scripts
-sudo chmod envVarsSetup.sh
-sudo chmod gitTokenSetup.sh
-sudo chmod 600 VPSMySQL.cnf
 
-#Setup Security
-./envVarsSetup.sh "$sql_user" "$sql_password" > envVarsSetup.log
-./gitTokenSetup.sh "$git_username" "$git_token" > gitTokenSetup.log
-
+# sudo chmod +x installNode.sh
+# sudo chmod +x installMySQL.sh
+# sudo chmod +x createMySQLDB.sh
+# sudo chmod +x cloneNodeServer.sh
+# sudo chmod +x setupMySQLUser.sh
+# sudo chmod +x cloneNodeServerRefresher.sh
+# sudo chmod +x launchNodeServer.sh
+# sudo chmod +x launchNodeServerRefresher.sh
+# sudo chmod +x cloneReactApp.sh
+# sudo chmod +x buildReactApp.sh
+# sudo chmod +x cloneReactServer.sh
+# sudo chmod +x launchReactServer.sh
+# sudo chmod +x resetDatabase.sh
+# sudo chmod 600 VPSMySQL.cnf
 
 #Install and Clone scripts
 # ./installNode.sh> script_node.log
 # ./installMySQL.sh > script_mysql.log
 # ./setupMySQLUser.sh > setupMySQLUser.log
+# ./cloneNodeServer.sh "$git_token" > cloneNodeServer.log
 # ./cloneNodeServerRefresher.sh "$git_token" > cloneNodeServerRefresher.log
 
 

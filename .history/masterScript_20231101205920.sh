@@ -33,19 +33,17 @@ git clone $REPO_URL
 cd /home/SamLProgrammer/church_billboard/initial_scripts/church_billboard_scripts
 
 #giving executable permissions to scripts
+
+# sudo chmod +x installNode.sh
 sudo chmod envVarsSetup.sh
 sudo chmod gitTokenSetup.sh
 sudo chmod 600 VPSMySQL.cnf
-
-#Setup Security
-./envVarsSetup.sh "$sql_user" "$sql_password" > envVarsSetup.log
-./gitTokenSetup.sh "$git_username" "$git_token" > gitTokenSetup.log
-
 
 #Install and Clone scripts
 # ./installNode.sh> script_node.log
 # ./installMySQL.sh > script_mysql.log
 # ./setupMySQLUser.sh > setupMySQLUser.log
+# ./cloneNodeServer.sh "$git_token" > cloneNodeServer.log
 # ./cloneNodeServerRefresher.sh "$git_token" > cloneNodeServerRefresher.log
 
 
