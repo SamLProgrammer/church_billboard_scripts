@@ -44,7 +44,7 @@ mkdir -p /home/SamLProgrammer/church_billboard/front
 # sudo chmod +x cloneReactServer.sh
 # sudo chmod +x launchReactServer.sh
 # sudo chmod +x resetDatabase.sh
-# sudo chmod 600 VPSMySQL.cnf
+sudo chmod 600 VPSMySQL.cnf
 
 #Install and Clone scripts
 # ./installNode.sh> script_node.log
