@@ -1,13 +1,9 @@
 #!/bin/bash
 
 # Read MySQL credentials from .cnf file
-if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <git_username> <git_token>"
-    exit 1
-fi
-
-user="$1"
-password="$2"
+while IFS= read -r line; do
+  export "$line"
+done < mysql.cnf
 
 # Display the MySQL credentials (optional)
 echo "MySQL user: $user"

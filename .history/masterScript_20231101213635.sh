@@ -35,14 +35,12 @@ cd /home/SamLProgrammer/church_billboard/initial_scripts/church_billboard_script
 #giving executable permissions to scripts
 sudo chmod +x envVarsSetup.sh
 sudo chmod +x gitTokenSetup.sh
-sudo chmod +x installMySQL.sh
 sudo chmod +x MySQLUserSetup.sh
 sudo chmod 600 VPSMySQL.cnf
 
 #Setup Security
 ./envVarsSetup.sh "$sql_user" "$sql_password" > envVarsSetup.log
 ./gitTokenSetup.sh "$git_username" "$git_token" > gitTokenSetup.log
-./installMySQL.sh > installMySQL.log
 ./MySQLUserSetup.sh > MySQLUserSetup.log
 
 
