@@ -1,7 +1,7 @@
 #!/bin/bash
 source /etc/environment
-# export DB_USER="$DB_USER"
-# export DB_PASSWORD="$DB_PASSWORD"
+export DB_USER="$DB_USER"
+export DB_PASSWORD="$DB_PASSWORD"
 TARGET_DIRECTORY="/home/SamLProgrammer/church_billboard/back/church_billboard_back"
 cd "$TARGET_DIRECTORY"
 
