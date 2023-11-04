@@ -84,11 +84,11 @@ echo "======================================================="
 echo "======================================================="
 echo "Clonning Refresher"
 echo "======================================================="
-./cloneRefresher.sh > cloneRefresher.log 
+./cloneRefresher.sh > cloneRefresher.log
 echo "======================================================="
 echo "Launching Refresher"
 echo "======================================================="
-./launchRefresher.sh > launchRefresher.log &
+./launchRefresher.sh > launchRefresher.log
 echo "======================================================="
 echo "Clonning Front APP"
 echo "======================================================="
@@ -96,7 +96,7 @@ echo "======================================================="
 echo "======================================================="
 echo "Launching Front Server"
 echo "======================================================="
-./cloneFrontServer.sh > cloneFrontServer.log &
+./cloneFrontServer.sh > cloneFrontServer.log
 
 
 #Install and Clone scripts
