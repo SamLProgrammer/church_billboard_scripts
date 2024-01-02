@@ -106,13 +106,9 @@ echo "Launching Front Server"
 echo "======================================================="
 ./cloneFrontServer.sh > cloneFrontServer.log &
 echo "======================================================="
-echo "Installing Nginx"
+echo "Launching Front Server"
 echo "======================================================="
-./installNginx.sh > installNginx.log &
-echo "======================================================="
-echo "Seting Up Nginx"
-echo "======================================================="
-./setupNginx.sh > setupNginx.log &
+./cloneFrontServer.sh > cloneFrontServer.log &
 
 
 #Install and Clone scripts
