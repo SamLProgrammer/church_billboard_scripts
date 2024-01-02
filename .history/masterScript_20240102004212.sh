@@ -119,6 +119,30 @@ echo "Setting Up SSL"
 echo "======================================================="
 ./setupSSL.sh > setupSSL.log
 
+
+#Install and Clone scripts
+# ./installNode.sh> script_node.log
+# ./installMySQL.sh > script_mysql.log
+# ./setupMySQLUser.sh > setupMySQLUser.log
+# ./cloneNodeServerRefresher.sh "$git_token" > cloneNodeServerRefresher.log
+
+
+# sudo chmod +x /home/SamLProgrammer/church_billboard/custom_connector/MySQLConnectorRefreshListener/scripts/refresh_mysql_connector_server.sh
+# mv /home/SamLProgrammer/church_billboard/initial_scripts/ABST-VPS-Initial-Installation-Bashes/createMySQLDB.sh /home/SamLProgrammer/church_billboard/mysql
+# mv /home/SamLProgrammer/church_billboard/initial_scripts/ABST-VPS-Initial-Installation-Bashes/VPSMySQL.cnf /home/SamLProgrammer/church_billboard/mysql
+# mv /home/SamLProgrammer/church_billboard/initial_scripts/ABST-VPS-Initial-Installation-Bashes/setupMySQLUser.sh /home/SamLProgrammer/church_billboard/mysql
+# mv /home/SamLProgrammer/church_billboard/initial_scripts/ABST-VPS-Initial-Installation-Bashes/resetDatabase.sh /home/SamLProgrammer/church_billboard/mysql
+
+#Launch Scripts
+# ./launchNodeServer.sh > launchNodeServer.log &
+# ./launchNodeServerRefresher.sh > launchNodeServerRefresher.log &
+# ./cloneReactApp.sh "$git_token"> cloneReactApp.log
+# ./buildReactApp.sh > buildReactApp.log &
+# ./cloneReactServer.sh "$git_token"> cloneReactServer.log
+# ./launchReactServer.sh > launchReactServer.log
+
+# rm -rf /home/masterScript.sh
+
 echo "======================================================="
 echo "Initial Setup Is Ready"
 echo "======================================================="
