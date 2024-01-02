@@ -20,6 +20,7 @@ mkdir -p /home/SamLProgrammer/church_billboard/initial_scripts
 mkdir -p /home/SamLProgrammer/church_billboard/back
 mkdir -p /home/SamLProgrammer/church_billboard/mysql
 mkdir -p /home/SamLProgrammer/church_billboard/front
+mkdir -p /home/SamLProgrammer/church_billboard/devops
 
 #downloading repo (using provided token)
 REPO_URL="https://SamLProgrammer:${git_token}@github.com/SamLProgrammer/church_billboard_scripts.git"
@@ -33,6 +34,8 @@ git clone $REPO_URL
 cd /home/SamLProgrammer/church_billboard/initial_scripts/church_billboard_scripts
 
 #giving executable permissions to scripts
+sudo chmod +x installNode.sh
+sudo chmod +x installPM2.sh
 sudo chmod +x envVarsSetup.sh
 sudo chmod +x gitTokenSetup.sh
 sudo chmod +x installMySQL.sh
@@ -49,6 +52,14 @@ sudo chmod +x cloneFrontServer.sh
 sudo chmod 600 VPSMySQL.cnf
 
 #Setup Security
+echo "======================================================="
+echo "Installing Node and npm "
+echo "======================================================="
+./installNode.sh > installNode.log
+echo "======================================================="
+echo "Installing PM2"
+echo "======================================================="
+./installPM2.sh > installPM2.log
 echo "======================================================="
 echo "Setting up ENV "
 echo "======================================================="
@@ -80,15 +91,15 @@ echo "======================================================="
 echo "======================================================="
 echo "Launching up Back Server ..."
 echo "======================================================="
-./launchBackServer.sh > launchBackServer.log
+./launchBackServer.sh > launchBackServer.log &
 echo "======================================================="
 echo "Clonning Refresher"
 echo "======================================================="
-./cloneRefresher.sh > cloneRefresher.log
+./cloneRefresher.sh > cloneRefresher.log 
 echo "======================================================="
 echo "Launching Refresher"
 echo "======================================================="
-./launchRefresher.sh > launchRefresher.log
+./launchRefresher.sh > launchRefresher.log &
 echo "======================================================="
 echo "Clonning Front APP"
 echo "======================================================="
@@ -96,7 +107,7 @@ echo "======================================================="
 echo "======================================================="
 echo "Launching Front Server"
 echo "======================================================="
-./cloneFrontServer.sh > cloneFrontServer.log
+./cloneFrontServer.sh > cloneFrontServer.log &
 
 
 #Install and Clone scripts

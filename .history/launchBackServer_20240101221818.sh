@@ -1,5 +1,13 @@
 #!/bin/bash
 source /etc/environment
+exp_db_user="$DB_USER"
+exp_db_password="$DB_PASSWORD"
+echo "$exp_db_user"
+echo "$exp_db_password"
+export DB_USER="$exp_db_user"
+export DB_PASSWORD="$exp_db_password"
+echo "$DB_USER"
+echo "$DB_PASSWORD"
 TARGET_DIRECTORY="/home/SamLProgrammer/church_billboard/back/church_billboard_back"
 cd "$TARGET_DIRECTORY"
 
